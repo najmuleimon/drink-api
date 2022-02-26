@@ -1,0 +1,25 @@
+/*=========================== 
+    Common CSS 
+=============================*/
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+
+img {
+    border: none;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*=========================== 
+    banner CSS 
+=============================*/
