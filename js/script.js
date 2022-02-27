@@ -49,13 +49,15 @@ const displayDrinks = drinks => {
     allDrink.textContent = ''
     drinks.forEach(drink => {
        let div = document.createElement('div')
+       div.classList.add('col-md-4')
        div.innerHTML = `
        <img src="${drink.strDrinkThumb}" alt="">
         <h2>${drink.strDrink}</h2>
         <h3>${drink.strCategory}</h3>
         <p>${drink.strInstructions}</p>
         <p>${drink.strIngredient1}, ${drink.strIngredient2}, ${drink.strIngredient3}, ${drink.strIngredient4}, ${drink.strIngredient5}, ${drink.strIngredient6}, ${drink.strIngredient7}, ${drink.strIngredient8}, ${drink.strIngredient9}</p>
-       `
+        <button onclick="showDetail(${drink.idDrink})">see details</button>
+        `
         allDrink.appendChild(div)
     })
 
@@ -64,4 +66,9 @@ const displayDrinks = drinks => {
     // drinks view on
     toggleSearchResult('block')
 }
-
+const showDetail = (id) => {
+    const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
+    fetch(url)
+    .then(res => res.json())
+    .then(data => console.log(data.drinks[0]))
+}

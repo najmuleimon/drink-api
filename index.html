@@ -12,15 +12,31 @@
 <body>
     
     <section class="banner">
-        <input id="input-search" type="text" placeholder="search drinks by name">
-        <button onclick="searchDrink()">search</button>
-        <button onclick="loadAllDrink()">show all drinks</button>
-        <button onclick="randomDrink()">find more</button>
-        <div id="spinner">Loading...</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Welcome to the world of Drinks</h2>
+                    <h1>Drink Good, Live Good</h1>
+                    <div class="form-floating d-flex">
+                        <input id="input-search" type="text" class="form-control" id="floatingSearch" placeholder="Search Drinks by Name">
+                        <label for="floatingSearch" class="floatingSearch">Search Drinks by Name</label>
+                        <button class="search-btn" onclick="searchDrink()">search</button>
+                    </div>
+                    
+                    <button onclick="loadAllDrink()">show all drinks</button>
+                    <button onclick="randomDrink()">find more</button>
+                    <div id="spinner">Loading...</div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="all-drinks">
-        
+    <section class="drinks">
+        <div class="container">
+            <div class="row" id="all-drinks">
+                
+            </div>
+        </div>
     </section>
 
     <script src="js/bootstrap.bundle.min.js"></script>

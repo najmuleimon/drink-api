@@ -1,10 +1,13 @@
 /*=========================== 
     Common CSS 
 =============================*/
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
     outline: none;
+    font-family: 'Hubballi', cursive;
 }
 
 img {
@@ -23,3 +26,53 @@ a {
 /*=========================== 
     banner CSS 
 =============================*/
+.banner {
+    background-image: url(../images/banner.jpg);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 700px;
+}
+
+.banner h2 {
+    font-size: 36px;
+    color: #fff;
+}
+
+.banner h1 {
+    font-size: 40px;
+    color: #fff;
+}
+
+.banner .form-control {
+    background: transparent;
+    font-size: 24px;
+    color: #fff;
+    height: 50px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.banner .floatingSearch {
+    color: #fff;
+}
+
+.form-floating>label {
+    padding: 10px .75rem;
+}
+
+.banner .search-btn {
+    width: 150px;
+    height: 50px;
+    background: #fff;
+    color: #d41c1c;
+    outline: none;
+    border: 0;
+    font-size: 24px;
+    text-transform: capitalize;
+}
