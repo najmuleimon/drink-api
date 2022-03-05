@@ -23,6 +23,11 @@ a {
     text-decoration: none;
 }
 
+#spinner,
+#load-more {
+    display: none;
+}
+
 /*=========================== 
     banner CSS 
 =============================*/
@@ -75,4 +80,13 @@ a {
     border: 0;
     font-size: 24px;
     text-transform: capitalize;
+}
+
+.error-msg {
+    font-size: 20px;
+    color: #fff;
+}
+
+.drinks img {
+    width: 100%;
 }
