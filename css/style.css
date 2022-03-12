@@ -28,17 +28,22 @@ a {
     display: none;
 }
 
+#spinner {
+    font-size: 20px;
+    color: #fff;
+}
+
 /*=========================== 
     banner CSS 
 =============================*/
 .banner {
     background-image: url(../images/banner.jpg);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: overlay;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 700px;
+    min-height: 400px;
 }
 
 .banner h2 {
@@ -87,6 +92,7 @@ a {
     color: #fff;
 }
 
+.modal-body img,
 .drinks img {
     width: 100%;
 }

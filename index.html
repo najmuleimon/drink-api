@@ -17,14 +17,14 @@
                 <div class="col-md-6">
                     <h2>Welcome to the world of Drinks</h2>
                     <h1>Drink Good, Live Good</h1>
-                    <div class="form-floating d-flex">
+                    <div class="form-floating d-flex mb-2">
                         <input id="input-search" type="text" class="form-control" id="floatingSearch" placeholder="Search Drinks by Name">
                         <label for="floatingSearch" class="floatingSearch">Search Drinks by Name</label>
                         <button class="search-btn" onclick="searchDrink()">search</button>
                     </div>
                     
-                    <button onclick="loadAllDrink()">show all drinks</button>
-                    <button onclick="randomDrink()">find more</button>
+                    <button onclick="loadAllDrink()" class="btn btn-primary">Show all drinks</button>
+                    <button onclick="randomDrink()" class="btn btn-success">Find More</button>
                     <p class="error-msg" id="error-msg"></p>
                     <div id="spinner">Loading...</div>
                 </div>
@@ -37,13 +37,35 @@
             <div class="row" id="all-drinks">
                 
             </div>
+            <div class="row" id="rest-drinks">
+                
+            </div>
             <div class="row">
                 <div class="col-md-12">
-                    <button id="load-more">Load more</button>
+                    <button id="load-more" onclick="loadMore()" class="btn btn-success">Load more</button>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Drinks Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
