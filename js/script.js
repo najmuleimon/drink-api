@@ -101,11 +101,10 @@ const showDetail = async id => {
 const loadMore = restAll => {
     const loadMoreBtn = document.getElementById('load-more')
     
-    
-    // const allDrink = document.getElementById('all-drinks')
+    const allDrink = document.getElementById('all-drinks')
+    // allDrink.textContent = ''
     loadMoreBtn.addEventListener('click', function(){
-        const restDrinks = document.getElementById('rest-drinks')
-        restDrinks.textContent = ''
+        const restDrinks = document.getElementById('all-drinks')
         restAll.slice(10).forEach(drink => {
             let div = document.createElement('div')
             div.classList.add('col-md-4')
@@ -120,9 +119,8 @@ const loadMore = restAll => {
              restDrinks.appendChild(div)
          })
          toggleLoadMore('none')
-         // toggle rest drinks
-        toggleRestDrinks('flex')
     })
+    
 }
 
 // display drink details on modal
